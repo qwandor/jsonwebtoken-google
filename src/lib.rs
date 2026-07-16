@@ -91,8 +91,8 @@ impl Parser {
 mod tests {
     use jsonwebtoken::errors::ErrorKind;
 
-    use crate::test_helper::{setup, TokenClaims};
     use crate::ParserError;
+    use crate::test_helper::{TokenClaims, setup};
 
     #[tokio::test]
     async fn should_correct() {

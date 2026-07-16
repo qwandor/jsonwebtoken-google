@@ -2,7 +2,7 @@
 name = "jsonwebtoken-google"
 version = "0.1.6"
 authors = ["Kviring Aleksey <alex@kviring.com>"]
-edition = "2018"
+edition = "2024"
 description = "parse and validate google jwt token with jsonwebtoken"
 license = "MIT/Apache-2.0"
 documentation = "https://docs.rs/jsonwebtoken-google"
