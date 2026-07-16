@@ -11,7 +11,6 @@ mod keys;
 #[cfg(any(test, feature = "test-helper"))]
 pub mod test_helper;
 
-
 ///
 /// Parser errors
 ///
@@ -65,7 +64,10 @@ impl Parser {
                         let aud = vec![self.client_id.to_owned()];
                         let mut validation = Validation::new(Algorithm::RS256);
                         validation.set_audience(&aud);
-                        validation.set_issuer(&["https://accounts.google.com".to_string(), "accounts.google.com".to_string()]);
+                        validation.set_issuer(&[
+                            "https://accounts.google.com".to_string(),
+                            "accounts.google.com".to_string(),
+                        ]);
                         validation.validate_exp = true;
                         validation.validate_nbf = false;
                         let result = jsonwebtoken::decode::<T>(token, &key, &validation);
@@ -89,8 +91,8 @@ impl Parser {
 mod tests {
     use jsonwebtoken::errors::ErrorKind;
 
-    use crate::ParserError;
     use crate::test_helper::{setup, TokenClaims};
+    use crate::ParserError;
 
     #[tokio::test]
     async fn should_correct() {

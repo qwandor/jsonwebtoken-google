@@ -1,8 +1,8 @@
 use std::ops::Add;
 use std::time::{Duration, SystemTime, UNIX_EPOCH};
 
-use base64::Engine;
 use base64::engine::general_purpose::URL_SAFE_NO_PAD;
+use base64::Engine;
 use httpmock::MockServer;
 use jsonwebtoken::{Algorithm, EncodingKey, Header};
 use rand::thread_rng;
