@@ -10,9 +10,6 @@ readme = "README.md"
 keywords = ["google", "jwt", "sign", "token", "android"]
 repository = "https://github.com/cheetah-games/jsonwebtoken-google"
 
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 jsonwebtoken = "9.2.0"
 serde = { version = "1.0", features = ["derive"] }
@@ -23,12 +20,13 @@ httpmock = { version = "0.6.2", optional = true }
 rustls = { version = "0.22.1" }
 base64 = { version = "0.21.5", optional = true }
 thiserror = "1.0.30"
-rsa = "0.9.6"
-rand = "0.8.5"
+rsa = "0.9.10"
+rand = { version = "0.8.7", optional = true }
 
 [dev-dependencies]
 httpmock = { version = "0.6.2" }
 base64 = { version = "0.21.5" }
+rand = "0.8.7"
 
 [features]
-test-helper = ["httpmock", "base64"]
+test-helper = ["dep:httpmock", "dep:base64", "dep:rand"]
