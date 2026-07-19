@@ -5,7 +5,6 @@ authors = ["Kviring Aleksey <alex@kviring.com>"]
 edition = "2024"
 description = "parse and validate google jwt token with jsonwebtoken"
 license = "MIT/Apache-2.0"
-documentation = "https://docs.rs/jsonwebtoken-google"
 readme = "README.md"
 keywords = ["google", "jwt", "sign", "token", "android"]
 repository = "https://github.com/qwandor/jsonwebtoken-google2"
