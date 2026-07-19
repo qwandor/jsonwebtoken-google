@@ -1,5 +1,7 @@
 # Parse and validate Google JWT tokens
 
+This is a fork of https://github.com/avkviring/jsonwebtoken-google, which seems to be unmaintained.
+It just updates some dependencies.
 
 ```rust
 #[derive(Debug, Serialize, Deserialize)]

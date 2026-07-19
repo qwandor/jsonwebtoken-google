@@ -1,6 +1,6 @@
 [package]
-name = "jsonwebtoken-google"
-version = "0.1.6"
+name = "jsonwebtoken-google2"
+version = "0.2.0"
 authors = ["Kviring Aleksey <alex@kviring.com>"]
 edition = "2024"
 description = "parse and validate google jwt token with jsonwebtoken"
